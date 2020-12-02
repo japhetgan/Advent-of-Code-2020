@@ -40,6 +40,7 @@ function puzzle2(arr) {
     return count
 }
 
+//Input
 const input = `2-5 z: zzztvz
 2-8 d: pddzddkdvqgxndd
 4-14 r: rrrjrrrrrrbrrccrr
