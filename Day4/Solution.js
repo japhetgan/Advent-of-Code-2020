@@ -50,22 +50,22 @@
                          	measurement = value.substring(value.length - 2)
 
                      switch (e) {
-                         case "byr": (Number(value) >= 1920 && Number(value) <= 2002) ? (isQualified = true) : isQualified = false; break
-                         case "iyr": (Number(value) >= 2010 && Number(value) <= 2020) ? (isQualified = true) : isQualified = false; break
-                         case "eyr": (Number(value) >= 2020 && Number(value) <= 2030) ? (isQualified = true) : isQualified = false; break
+                         case "byr": (Number(value) >= 1920 && Number(value) <= 2002) ? isQualified = true : isQualified = false; break
+                         case "iyr": (Number(value) >= 2010 && Number(value) <= 2020) ? isQualified = true : isQualified = false; break
+                         case "eyr": (Number(value) >= 2020 && Number(value) <= 2030) ? isQualified = true : isQualified = false; break
                          case "hgt": 
                              if ( measurement === "cm") {
-                                 if (Number(height) >= 150 && Number(height) <= 193) (isQualified = true)
+                                 if (Number(height) >= 150 && Number(height) <= 193) isQualified = true
                                  else isQualified = false
                              } else {
                                  if (Number(height) >= 59 && Number(height) <= 76) isQualified = true
                                  else isQualified = false
                              }
                              break;
-                         case "hcl": value.substring(0, 1) === "#" ?  value.length - 1 === 6 ? (isQualified = true) : (isQualified = false) :  isQualified = false
+                         case "hcl": value.substring(0, 1) === "#" ?  value.length - 1 === 6 ? isQualified = true : isQualified = false :  isQualified = false
                              break
-                         case "ecl": color.includes(value) ? (isQualified = true) : isQualified = false; break
-                         case "pid": value.length === 9 ? (isQualified = true) : isQualified = false; break
+                         case "ecl": color.includes(value) ? isQualified = true : isQualified = false; break
+                         case "pid": value.length === 9 ? isQualified = true : isQualified = false; break
                      }
                  } else {
                     isQualified = false
