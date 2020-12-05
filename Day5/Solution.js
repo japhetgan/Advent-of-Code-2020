@@ -28,7 +28,9 @@ function solve(str) {
 
     const id = idArr.sort().filter((eachId, index, arr) => eachId + 2 === arr[index + 1])
 
+    //Challenge 1
     console.log(largestId);
+    //Challenge 2
     console.log(id[0] + 1);
 
 }
