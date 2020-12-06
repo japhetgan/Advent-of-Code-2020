@@ -6,13 +6,13 @@ function solve1(input) {
     let count = 0
     arr.forEach(str => {
         const arr = str.split("\n").join("").split("")
-        let uniqueArray = []
+        let uniqueChar = []
         for (i = 0; i < arr.length; i++) {
-            if (uniqueArray.indexOf(arr[i]) === -1) {
-                uniqueArray.push(arr[i]);
+            if (uniqueChar.indexOf(arr[i]) === -1) {
+                uniqueChar.push(arr[i]);
             }
         }
-        count += uniqueArray.length
+        count += uniqueChar.length
     })
 
     return count
